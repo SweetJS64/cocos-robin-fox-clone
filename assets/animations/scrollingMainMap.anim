@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "scrollingMainMap",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.75,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "y": [
+        {
+          "frame": 0,
+          "value": 0,
+          "curve": [
+            0.5394636015325671,
+            0.0030651340996169507,
+            0.5706896551724138,
+            0.9921455938697318
+          ]
+        },
+        {
+          "frame": 0.75,
+          "value": -3633
+        }
+      ]
+    }
+  },
+  "events": []
+}
