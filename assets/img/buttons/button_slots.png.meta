@@ -12,7 +12,7 @@
   "height": 86,
   "platformSettings": {},
   "subMetas": {
-    "button_slot": {
+    "button_slots": {
       "ver": "1.0.6",
       "uuid": "48d096d3-a334-41c5-b3b0-47aab6b38a85",
       "importer": "sprite-frame",

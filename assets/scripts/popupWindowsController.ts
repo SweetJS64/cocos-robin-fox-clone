@@ -8,6 +8,8 @@ export default class popupWindowsController extends cc.Component {
 
     @property(cc.Node)
     buildDialog: cc.Node = null;
+    @property(cc.Node)
+    darkeningBg: cc.Node = null;
 
     private _canvas: cc.Canvas;
     private _closePos: cc.Vec3;
@@ -41,6 +43,7 @@ export default class popupWindowsController extends cc.Component {
     }
 
     private _openWindow(windowNode: cc.Node) {
+        this.darkeningBg.active = true;
         windowNode.active = true;
         cc.tween(windowNode).to(0.3, { position: this._openPos }).start();        
     }
@@ -49,6 +52,7 @@ export default class popupWindowsController extends cc.Component {
         cc.tween(windowNode).to(0.3, { position: this._closePos })
         .call(() => {
             windowNode.active = false;
+            this.darkeningBg.active = false;
         }).start();
     }
 

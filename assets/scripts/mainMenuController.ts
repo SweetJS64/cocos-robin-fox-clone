@@ -5,6 +5,8 @@ export default class mainMenu extends cc.Component {
 
     @property(cc.Node)
     menuNode: cc.Node = null;
+    @property(cc.Node)
+    darkeningBg: cc.Node = null;
 
     private _canvas: cc.Canvas;
     private _closePos: cc.Vec3;
@@ -41,6 +43,7 @@ export default class mainMenu extends cc.Component {
 
     openMainMenu() {
         this.menuNode.active = true;
+        this.darkeningBg.active = true;
         cc.tween(this.menuNode).to(0.2, { position: this._openPos }).start();        
     }
 
@@ -48,6 +51,7 @@ export default class mainMenu extends cc.Component {
         cc.tween(this.menuNode).to(0.2, { position: this._closePos })
         .call(() => {
             this.menuNode.active = false;
+            this.darkeningBg.active = false;
         }).start();
     }
 }
