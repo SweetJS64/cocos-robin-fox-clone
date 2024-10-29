@@ -19,7 +19,7 @@ export default class upgradeConstruction extends cc.Component {
         if (this._spriteComponent.spriteFrame == null) {
             this._grade = 0;
         }
-    this._getCanvas();
+        this._getCanvas();
     }
 
     private _getCanvas() {
@@ -33,12 +33,27 @@ export default class upgradeConstruction extends cc.Component {
     }
 
     upgradeConstruction () {
-        if(this._grade>1) return;
+        
 
         const prefabInstance = cc.instantiate(this.smokePrefab);
         prefabInstance.position = this.node.position;
         this._canvas.node.addChild(prefabInstance);
         
+        let nextSprite
+        
+        cc.tween(this.node).to(1, { scale: 0 })
+        .call(() => {
+            this._spriteComponent.spriteFrame = nextSprite;
+        }).to(1, { scale: 1 }).call(() => {
+            prefabInstance.destroy();
+        }).start();
+
+        this._grade++;
+    }
+
+    checkGrade(){
+        if(this._grade>1) return null;
+
         let nextSprite: cc.SpriteFrame;
 
         switch(this._grade){
@@ -49,14 +64,6 @@ export default class upgradeConstruction extends cc.Component {
                 nextSprite = this.secondGrade;
                 break;
         }        
-
-        cc.tween(this.node).to(1, { scale: 0 })
-        .call(() => {
-            this._spriteComponent.spriteFrame = nextSprite;
-        }).to(1, { scale: 1 }).call(() => {
-            prefabInstance.destroy();
-        }).start();
-
-        this._grade++;
+        return nextSprite;
     }
 }
