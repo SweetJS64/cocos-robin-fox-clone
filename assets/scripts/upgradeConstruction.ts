@@ -9,15 +9,19 @@ export default class upgradeConstruction extends cc.Component {
     firstGrade: cc.SpriteFrame = null;
     @property(cc.SpriteFrame)
     secondGrade: cc.SpriteFrame = null;
+    @property(cc.Label)
+    balanceLabel: cc.Label = null;
 
     private _spriteComponent: cc.Sprite = null;
-    private _grade: number;
+    private _gradeId: number;
+    private _price: number = 1000;
     private _canvas: cc.Canvas;
 
     start () {
         this._spriteComponent = this.getComponent(cc.Sprite);
         if (this._spriteComponent.spriteFrame == null) {
-            this._grade = 0;
+            this._gradeId = 0;//TODO: add updateGrade(cc.Model)
+            console.log(this._gradeId.toString());
         }
         this._getCanvas();
     }
@@ -32,31 +36,12 @@ export default class upgradeConstruction extends cc.Component {
         this._canvas = canvas;
     }
 
-    upgradeConstruction () {
-        
-
-        const prefabInstance = cc.instantiate(this.smokePrefab);
-        prefabInstance.position = this.node.position;
-        this._canvas.node.addChild(prefabInstance);
-        
-        let nextSprite
-        
-        cc.tween(this.node).to(1, { scale: 0 })
-        .call(() => {
-            this._spriteComponent.spriteFrame = nextSprite;
-        }).to(1, { scale: 1 }).call(() => {
-            prefabInstance.destroy();
-        }).start();
-
-        this._grade++;
-    }
-
-    checkGrade(){
-        if(this._grade>1) return null;
+    private _checkGrade(){
+        if(this._gradeId>1) return null;
 
         let nextSprite: cc.SpriteFrame;
 
-        switch(this._grade){
+        switch(this._gradeId){
             case 0:
                 nextSprite = this.firstGrade;
                 break;
@@ -65,5 +50,27 @@ export default class upgradeConstruction extends cc.Component {
                 break;
         }        
         return nextSprite;
+    }
+
+    upgradeConstruction () {
+        if (Number(this.balanceLabel.string) < this._price) return;
+        if (this._gradeId > 1) return;
+
+        const prefabInstance = cc.instantiate(this.smokePrefab);
+        prefabInstance.position = this.node.position;
+        this._canvas.node.addChild(prefabInstance);
+        
+        let nextSprite = this._checkGrade();
+        
+        cc.tween(this.node).to(1, { scale: 0 })
+        .call(() => {
+            this._spriteComponent.spriteFrame = nextSprite;
+        }).to(1, { scale: 1 }).call(() => {
+            prefabInstance.destroy();
+        }).start();
+
+        this._gradeId++;
+        this.balanceLabel.string = (Number(this.balanceLabel.string) - this._price).toString();
+        console.log((Number(this.balanceLabel.string) - this._price).toString());
     }
 }

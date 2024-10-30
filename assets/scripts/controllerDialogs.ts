@@ -18,9 +18,11 @@ export default class controllerDialogs extends cc.Component {
     private _openPosMenu: cc.Vec3;
     private _closePosDialogs: cc.Vec3;
     private _openPosDialogs: cc.Vec3;
-    private _dialogsArray: cc.Node [] = [this.buildDialog, this.sharingDialog];
+    private _dialogsArray: cc.Node [];
 
     protected onLoad() {
+        this._dialogsArray = [this.buildDialog, this.sharingDialog];
+
         this._getCanvas(); 
         this._setPosValueMenu()
         this._setStartPropertiesMenu();
