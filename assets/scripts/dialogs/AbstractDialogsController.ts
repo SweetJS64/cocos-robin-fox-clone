@@ -15,10 +15,7 @@ export default abstract class AbstractDialogsController extends cc.Component {
 
     open() {
         this.darkeningBg.active = true;
-
-        console.log("openStart " + this.node.active);
         this.node.active = true;
-        console.log("openFinish " + this.node.active);
         cc.tween(this.node)
         .to(0.3, { position: this.openPos })
         .start();

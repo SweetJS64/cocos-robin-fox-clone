@@ -18,13 +18,11 @@ export default class DialogsController extends cc.Component {
 
     protected onLoad() {
         this._getCanvas();
-        console.log("BIBA I BOBA");
         [
             this.mainMenuController,
             this.buildDialogController, 
             this.sharingDialogController
         ].forEach((d) => {d.init(this._canvas, this.darkeningBg)});
-        console.log("DVA DOLBOEBA");
     }
 
     private _getCanvas() { 
