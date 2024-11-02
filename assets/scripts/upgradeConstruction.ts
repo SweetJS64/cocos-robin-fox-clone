@@ -1,7 +1,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class upgradeConstruction extends cc.Component {
+export default class UpgradeConstruction extends cc.Component {
 
     @property(cc.Prefab)
     smokePrefab: cc.Prefab = null;
@@ -21,7 +21,6 @@ export default class upgradeConstruction extends cc.Component {
         this._spriteComponent = this.getComponent(cc.Sprite);
         if (this._spriteComponent.spriteFrame == null) {
             this._gradeId = 0;//TODO: add updateGrade(cc.Model)
-            console.log(this._gradeId.toString());
         }
         this._getCanvas();
     }
@@ -57,8 +56,7 @@ export default class upgradeConstruction extends cc.Component {
         if (this._gradeId > 1) return;
 
         const prefabInstance = cc.instantiate(this.smokePrefab);
-        prefabInstance.position = this.node.position;
-        this._canvas.node.addChild(prefabInstance);
+        this.node.addChild(prefabInstance);
         
         let nextSprite = this._checkGrade();
         
@@ -71,6 +69,5 @@ export default class upgradeConstruction extends cc.Component {
 
         this._gradeId++;
         this.balanceLabel.string = (Number(this.balanceLabel.string) - this._price).toString();
-        console.log((Number(this.balanceLabel.string) - this._price).toString());
     }
 }

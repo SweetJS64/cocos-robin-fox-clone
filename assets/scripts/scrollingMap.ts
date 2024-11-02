@@ -1,7 +1,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class scrollingMap extends cc.Component {
+export default class ScrollingMap extends cc.Component {
 
     goToSlots(){
         let wrapMode = cc.WrapMode.Normal; 

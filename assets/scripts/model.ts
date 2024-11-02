@@ -1,7 +1,4 @@
-const {ccclass, property} = cc._decorator;
-
-@ccclass
-export default class model extends cc.Component {
+export default class Model {
 
     public Balance: number;
     public Stars: number;

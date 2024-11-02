@@ -1,7 +1,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class balanceController extends cc.Component {
+export default class BalanceController extends cc.Component {
 
     @property(cc.Label)
     balanceLabel: cc.Label = null;
