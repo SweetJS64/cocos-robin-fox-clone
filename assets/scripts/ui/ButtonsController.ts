@@ -1,5 +1,5 @@
-import AbstractDialogsController from "./AbstractDialogsController";
-import DialogsController from "./DialogsController";
+import AbstractDialogsController from "../dialogs/AbstractDialogsController";
+import DialogsController from "../dialogs/DialogsController";
 const {ccclass, property, executeInEditMode} = cc._decorator;
 
 @ccclass
