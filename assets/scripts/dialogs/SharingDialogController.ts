@@ -1,8 +1,8 @@
 import AbstractDialogsController from "./AbstractDialogsController";
-
-const {ccclass} = cc._decorator;
+const {ccclass, executeInEditMode} = cc._decorator;
 
 @ccclass
+@executeInEditMode
 export default class SharingDialogController extends AbstractDialogsController {
 
     protected onLoad() {

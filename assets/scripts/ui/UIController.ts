@@ -1,4 +1,4 @@
-import DialogsController from "./DialogsController";
+//import DialogsController from "./DialogsController";
 
 const {ccclass, property} = cc._decorator;
 

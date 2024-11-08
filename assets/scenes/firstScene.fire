@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 268
+        "__id__": 269
       }
     ],
     "_active": false,
@@ -84,10 +84,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 266
+        "__id__": 267
       },
       {
-        "__id__": 267
+        "__id__": 268
       }
     ],
     "_prefab": null,
@@ -238,7 +238,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Main map",
+    "_name": "Main map(ButtonsController)",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -261,6 +261,9 @@
       },
       {
         "__id__": 265
+      },
+      {
+        "__id__": 266
       }
     ],
     "_prefab": null,
@@ -7259,7 +7262,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 802,
+      "width": 775,
       "height": 1331
     },
     "_anchorPoint": {
@@ -7718,7 +7721,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        351,
+        371.472,
         615.5,
         0,
         0,
@@ -7975,7 +7978,7 @@
     "_target": null,
     "_alignFlags": 33,
     "_left": 0,
-    "_right": 0,
+    "_right": -33.97199999999998,
     "_top": 0,
     "_bottom": 0,
     "_verticalCenter": 0,
@@ -10272,7 +10275,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 119,
-      "height": 330
+      "height": 170
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -10350,7 +10353,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        80,
+        0,
         0,
         0,
         0,
@@ -10592,7 +10595,7 @@
         "__id__": 237
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 240
@@ -10877,7 +10880,7 @@
     "_layoutSize": {
       "__type__": "cc.Size",
       "width": 119,
-      "height": 330
+      "height": 170
     },
     "_resize": 1,
     "_N$layoutType": 2,
@@ -11820,6 +11823,28 @@
     },
     "_enabled": true,
     "_id": "371y8dSTNAEbOI0tu7osri"
+  },
+  {
+    "__type__": "d7a1aRi32dC4ZMMGvNUtjnh",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 5
+    },
+    "_enabled": true,
+    "dialogsController": {
+      "__id__": 179
+    },
+    "slotBotLeftUIBlock": {
+      "__id__": 230
+    },
+    "sharingButtonPrefab": {
+      "__uuid__": "3f6ed69c-ef51-4ed4-8bfc-a76e966683c2"
+    },
+    "sharingDialogController": {
+      "__id__": 178
+    },
+    "_id": "e9A4CdYCFFHYygcKMVR//T"
   },
   {
     "__type__": "cc.Canvas",
