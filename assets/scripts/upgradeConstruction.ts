@@ -17,7 +17,7 @@ export default class UpgradeConstruction extends cc.Component {
     private _price: number = 1000;
     private _canvas: cc.Canvas;
 
-    start () {
+    start() {
         this._spriteComponent = this.getComponent(cc.Sprite);
         if (this._spriteComponent.spriteFrame == null) {
             this._gradeId = 0;//TODO: add updateGrade(cc.Model)
@@ -35,7 +35,7 @@ export default class UpgradeConstruction extends cc.Component {
         this._canvas = canvas;
     }
 
-    private _checkGrade(){
+    private _checkGrade() {
         if(this._gradeId>1) return null;
 
         let nextSprite: cc.SpriteFrame;
@@ -51,12 +51,14 @@ export default class UpgradeConstruction extends cc.Component {
         return nextSprite;
     }
 
-    upgradeConstruction () {
+    upgradeConstruction() {
         if (Number(this.balanceLabel.string) < this._price) return;
         if (this._gradeId > 1) return;
 
-        const prefabInstance = cc.instantiate(this.smokePrefab);
-        this.node.addChild(prefabInstance);
+        const prefabBuildAnimation = cc.instantiate(this.smokePrefab);
+        let nodeParent = this.node.parent;
+        prefabBuildAnimation.position = this.node.position;
+        nodeParent.addChild(prefabBuildAnimation);
         
         let nextSprite = this._checkGrade();
         
@@ -64,7 +66,7 @@ export default class UpgradeConstruction extends cc.Component {
         .call(() => {
             this._spriteComponent.spriteFrame = nextSprite;
         }).to(1, { scale: 1 }).call(() => {
-            prefabInstance.destroy();
+            prefabBuildAnimation.destroy();
         }).start();
 
         this._gradeId++;

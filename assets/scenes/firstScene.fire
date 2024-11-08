@@ -2090,11 +2090,11 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 15
+      "__id__": 20
     },
     "component": "",
-    "_componentId": "f6a56Yf1nJGSbmz4396aWwJ",
-    "handler": "closeBuildDialog",
+    "_componentId": "cc75bpq6h1KfYWamW6a8oR7",
+    "handler": "close",
     "customEventData": ""
   },
   {
@@ -4215,7 +4215,7 @@
     },
     "_enabled": true,
     "smokePrefab": {
-      "__uuid__": "18e47d31-6b3c-4e0b-805a-cb8ca17b803b"
+      "__uuid__": "32765f98-cb73-443f-86a6-927ea77f25e6"
     },
     "firstGrade": {
       "__uuid__": "5b6f9c0c-d94c-4e4d-a702-931f3e23e786"
@@ -4332,7 +4332,7 @@
     },
     "_enabled": true,
     "smokePrefab": {
-      "__uuid__": "18e47d31-6b3c-4e0b-805a-cb8ca17b803b"
+      "__uuid__": "32765f98-cb73-443f-86a6-927ea77f25e6"
     },
     "firstGrade": {
       "__uuid__": "e2a86ffe-3c62-4504-89c9-2b7f6b3ea362"
@@ -4449,7 +4449,7 @@
     },
     "_enabled": true,
     "smokePrefab": {
-      "__uuid__": "18e47d31-6b3c-4e0b-805a-cb8ca17b803b"
+      "__uuid__": "32765f98-cb73-443f-86a6-927ea77f25e6"
     },
     "firstGrade": {
       "__uuid__": "c30f8266-b812-48e7-a0ce-d6861bb54455"
@@ -4566,7 +4566,7 @@
     },
     "_enabled": true,
     "smokePrefab": {
-      "__uuid__": "18e47d31-6b3c-4e0b-805a-cb8ca17b803b"
+      "__uuid__": "32765f98-cb73-443f-86a6-927ea77f25e6"
     },
     "firstGrade": {
       "__uuid__": "5e831810-d03c-4f60-8510-849594738b57"
@@ -4645,7 +4645,7 @@
     },
     "_enabled": true,
     "smokePrefab": {
-      "__uuid__": "18e47d31-6b3c-4e0b-805a-cb8ca17b803b"
+      "__uuid__": "32765f98-cb73-443f-86a6-927ea77f25e6"
     },
     "firstGrade": {
       "__uuid__": "e01d5ab4-1b29-4294-86a9-25fc8b57bdeb"
@@ -5195,11 +5195,11 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 15
+      "__id__": 20
     },
     "component": "",
-    "_componentId": "f6a56Yf1nJGSbmz4396aWwJ",
-    "handler": "closeBuildDialog",
+    "_componentId": "cc75bpq6h1KfYWamW6a8oR7",
+    "handler": "close",
     "customEventData": ""
   },
   {
@@ -5749,11 +5749,11 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 15
+      "__id__": 20
     },
     "component": "",
-    "_componentId": "f6a56Yf1nJGSbmz4396aWwJ",
-    "handler": "closeBuildDialog",
+    "_componentId": "cc75bpq6h1KfYWamW6a8oR7",
+    "handler": "close",
     "customEventData": ""
   },
   {
@@ -6303,11 +6303,11 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 15
+      "__id__": 20
     },
     "component": "",
-    "_componentId": "f6a56Yf1nJGSbmz4396aWwJ",
-    "handler": "closeBuildDialog",
+    "_componentId": "cc75bpq6h1KfYWamW6a8oR7",
+    "handler": "close",
     "customEventData": ""
   },
   {
@@ -6857,11 +6857,11 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 15
+      "__id__": 20
     },
     "component": "",
-    "_componentId": "f6a56Yf1nJGSbmz4396aWwJ",
-    "handler": "closeBuildDialog",
+    "_componentId": "cc75bpq6h1KfYWamW6a8oR7",
+    "handler": "close",
     "customEventData": ""
   },
   {
